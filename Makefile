@@ -1,7 +1,7 @@
 all: compile link
 
 compile:
-	g++ -Isrc/include -c main.cpp
+	g++ -Isrc/include -c  main.cpp
 	
 
 link:
