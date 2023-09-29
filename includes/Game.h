@@ -1,8 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 #include <stdint.h>
-#include "../libs/sfml/include/SFML/Graphics.hpp"
-
+//#include "../libs/sfml/include/SFML/Graphics.hpp"
+#include <SFML/Graphics.hpp>
 
 class Game
 {
