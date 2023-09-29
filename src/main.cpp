@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include 
+#include <SFML/Graphics.hpp>
 
 int main(int argc, char* argv[])
 {
