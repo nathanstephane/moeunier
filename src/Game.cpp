@@ -24,8 +24,14 @@ void Game::Initialize(int16_t& width, int16_t& height)
     
 }
 
+void Game::Setup()
+{
+    
+}
+
 void Game::Run()
 {
+    Setup();
         while (isRunning)
         {
             ProcessInput();
@@ -65,8 +71,10 @@ void Game::Update()
 void Game::Render()
 {
     //display or draw stuff
-    window->clear({255,0,0,255});
-
+    window->clear({21,21,21,255});
+    sf::RectangleShape r(sf::Vector2f(10,10));
+    r.setFillColor({255,255,255,255});
+    window->draw(r);
     //todo render game obj
     window->display();
 }
