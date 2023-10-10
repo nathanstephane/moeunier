@@ -2,6 +2,7 @@
 #define GAME_H
 #include <stdint.h>
 #include <SFML/Graphics.hpp>
+#include <glm/glm.hpp>
 
 
 #define FPS 30
