@@ -62,10 +62,21 @@ void Game::ProcessInput()
     }
     
 }
-
+bool TimeDifference(const sf::Int32& t1,const sf::Int32& t2)
+{
+    // std::cout<<"t1: "<<t1<<"\n";
+    // std::cout<<"t2: "<<t2<<"\n";
+    return t1>t2;
+}
 void Game::Update()
 {
-
+    //sf::Time current = clock.getElapsedTime();
+   while(!TimeDifference(clock.getElapsedTime().asMilliseconds(), previous_millisec_frames.asMilliseconds() + static_cast<sf::Int32>( MILLISECS_PER_FRAME)))
+   {
+        std::cout<<"True\n" << previous_millisec_frames.asMilliseconds()<<"\n";
+   }
+    previous_millisec_frames = clock.getElapsedTime();
+    //std::cout<<current.asMicroseconds()<<std::endl;
 }
 
 void Game::Render()

@@ -13,6 +13,8 @@ class Game
     private:
     bool isRunning;
     sf::RenderWindow* window;
+    sf::Clock clock;
+    sf::Time previous_millisec_frames;
     public:
         Game();
         ~Game();
