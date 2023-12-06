@@ -2,6 +2,7 @@
 #define GAME_H
 #include <stdint.h>
 #include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
 #include <glm/glm.hpp>
 
 
