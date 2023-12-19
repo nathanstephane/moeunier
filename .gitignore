@@ -1,2 +1,8 @@
 
 .vscode/
+.o
+*.o
+main.o
+Game.o
+assets/
+bin/moeunier.exe
