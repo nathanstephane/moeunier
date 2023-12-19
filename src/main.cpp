@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Game.h"
+#include "Game.hpp"
 #include <SFML/Graphics.hpp>
 #include <stdint.h>
 
