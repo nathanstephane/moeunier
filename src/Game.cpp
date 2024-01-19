@@ -1,6 +1,7 @@
-#include "Game.hpp"
 #include <iostream>
+#include "Game.hpp"
 #include "Logger.hpp"
+#include "ECS.hpp"
 
  Game::Game()
 {
@@ -24,12 +25,13 @@ void Game::Initialize(int16_t& width, int16_t& height)
     //window->setFramerateLimit(60);
 }
 
-glm::vec2 playerPosition;
-glm::vec1 playerVelocity;
 void Game::Setup()
 {
-    playerPosition = glm::vec2(10.0,20.0);
-    playerVelocity = glm::vec1(20.0);
+    //TODO
+    // Entity actor = ECS::registry.CreateEntity();
+    //actor.AddComponent<TransformComponent>();
+    //actor.AddComponent<BoxColliderComponent>();
+    //actor.AddComponent<SpriteComponent>("./assets/images/actor.png");
 }
 
 void Game::Run()
@@ -84,18 +86,16 @@ void Game::Update()
     double deltaTime = (clock.getElapsedTime().asMilliseconds() - previous_millisec_frames.asMilliseconds())/1000.0;
     previous_millisec_frames = clock.getElapsedTime();
 
-    playerPosition.x += playerVelocity.x*deltaTime;
-    playerPosition.y += 0*deltaTime;
+    //TODO: updates all the systems that need to be run
+    //MovementSystem.Update();
+    //CollisionSystem.Update();
+    //DamageSystem.Update();
 }
 
 void Game::Render()
 {
-    window->clear({21,21,21,255});
-
-    sf::RectangleShape r(sf::Vector2f(10,10));
-    r.setFillColor({255,255,255,255});
-    window->draw(r);
-
+    window->clear({21,21,21,255}); 
+    /*
     sf::Texture texture;
     if (!texture.loadFromFile("./assets/sprites/characters/bob_idle/tile000.png"))
     {
@@ -104,7 +104,9 @@ void Game::Render()
     sf::Sprite sprite;
     sprite.setTexture(texture);
     sprite.setPosition(playerPosition.x, playerPosition.y);
+    
     window->draw(sprite);
+    */
     window->display();
 }
 
