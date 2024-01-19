@@ -22,16 +22,12 @@ void Game::Initialize(int16_t& width, int16_t& height)
         Logger::Err("Error Creating the window.\n");
     }
     isRunning=true;
-    //window->setFramerateLimit(60);
+    
 }
 
 void Game::Setup()
 {
-    //TODO
-    // Entity actor = ECS::registry.CreateEntity();
-    //actor.AddComponent<TransformComponent>();
-    //actor.AddComponent<BoxColliderComponent>();
-    //actor.AddComponent<SpriteComponent>("./assets/images/actor.png");
+    
 }
 
 void Game::Run()
@@ -79,34 +75,17 @@ void Game::Update()
     
         sf::sleep(sf::milliseconds(timeToWait));
     }   
-//    while(!TimeDifference(clock.getElapsedTime().asMilliseconds(), previous_millisec_frames.asMilliseconds() + static_cast<sf::Int32>( MILLISECS_PER_FRAME)))
-//    {
-//        // std::cout<<"True\n" << previous_millisec_frames.asMilliseconds()<<"\n";
-//    }
+
     double deltaTime = (clock.getElapsedTime().asMilliseconds() - previous_millisec_frames.asMilliseconds())/1000.0;
     previous_millisec_frames = clock.getElapsedTime();
 
-    //TODO: updates all the systems that need to be run
-    //MovementSystem.Update();
-    //CollisionSystem.Update();
-    //DamageSystem.Update();
+   
 }
 
 void Game::Render()
 {
     window->clear({21,21,21,255}); 
-    /*
-    sf::Texture texture;
-    if (!texture.loadFromFile("./assets/sprites/characters/bob_idle/tile000.png"))
-    {
-        Logger::Err("Failed to load texture");
-    }
-    sf::Sprite sprite;
-    sprite.setTexture(texture);
-    sprite.setPosition(playerPosition.x, playerPosition.y);
-    
-    window->draw(sprite);
-    */
+  
     window->display();
 }
 
